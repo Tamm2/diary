@@ -11,6 +11,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'private_diary.settings')
+from dotenv import load_dotenv
+
+load_dotenv()
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "private_diary.settings.dev")
 
 application = get_wsgi_application()
