@@ -88,10 +88,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'diary',
-        'USER': 'postgres',
-        'PASSWORD': 'SimT28s25',
-        'HOST': 'database-1.cxagaao49eai.ap-northeast-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': '',
+        'PORT': '',
     }
 }
 
