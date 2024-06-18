@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'private_diary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'private_diary',
+        'NAME': 'diary',
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': '',
-        'PORT': '',
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': '5432',
     }
 }
 
